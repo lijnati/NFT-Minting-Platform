@@ -17,9 +17,6 @@ A complete NFT minting platform built with React, Ethereum smart contracts, and 
 - **Enhanced MetaMask Integration** - Robust wallet connection with error handling
 - **Real-time Stats** - Live contract information and minting progress
 - **Attribute Support** - Add custom traits and properties to NFTs
-- **Configurable Pricing** - Owner-controlled mint price and supply limits
-- **Advanced Error Handling** - Circuit breaker recovery and network validation
-- **Troubleshooting Guide** - Built-in help for connection issues
 
 ## Prerequisites
 
@@ -33,7 +30,7 @@ A complete NFT minting platform built with React, Ethereum smart contracts, and 
 ### 1. Clone and Install Dependencies
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/lijnati/NFT-Minting-Platform.git
 cd NFT-Minting-Platform
 
 # Install main project dependencies
@@ -42,7 +39,6 @@ npm install
 # Install frontend dependencies
 cd frontend
 npm install
-cd ..
 ```
 
 ### 2. Configure MetaMask for Sepolia
