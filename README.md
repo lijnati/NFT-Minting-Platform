@@ -21,21 +21,6 @@ A complete NFT minting platform built with React, Ethereum smart contracts, and 
 - 🔧 **Advanced Error Handling** - Circuit breaker recovery and network validation
 - 🛠️ **Troubleshooting Guide** - Built-in help for connection issues
 
-## Project Structure
-
-```
-nft-minting-platform/
-├── contracts/              # Smart contracts
-│   └── NFTCollection.sol   # Main ERC-721 contract
-├── frontend/               # React application
-│   ├── src/
-│   │   ├── components/     # React components
-│   │   ├── services/       # Web3 and IPFS services
-│   │   └── contracts/      # Contract ABIs and deployment info
-├── scripts/                # Deployment scripts
-└── README.md
-```
-
 ## Prerequisites
 
 - Node.js (v16 or higher)
@@ -129,7 +114,7 @@ npx hardhat node
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-## Smart Contract Features
+<!-- ## Smart Contract Features
 
 ### NFTCollection.sol (AbayNFT - ABY)
 
@@ -147,7 +132,7 @@ npx hardhat run scripts/deploy.js --network localhost
 - **Max Supply:** 10,000 NFTs
 - **Max per Address:** 5 NFTs
 
-**Key Functions:**
+ **Key Functions:**
 - `mint(address to, string memory uri)` - Public minting function
 - `ownerMint(address to, string memory uri)` - Owner-only minting
 - `setMintPrice(uint256 _mintPrice)` - Update mint price
@@ -205,8 +190,8 @@ The platform uses Pinata for IPFS storage:
     }
   ]
 }
-```
-
+``` -->
+<!-- 
 ## Deployment Information
 
 ### Current Live Deployment
@@ -259,105 +244,17 @@ npx hardhat verify --network sepolia CONTRACT_ADDRESS "AbayNFT" "ABY" "DEPLOYER_
 - **Supply cap** - Hard limit of 10,000 total NFTs
 - **Owner controls** - Price adjustment and minting toggle
 - **Withdrawal protection** - Only owner can withdraw funds
-- **URI immutability** - Token URIs stored on IPFS for permanence
+- **URI immutability** - Token URIs stored on IPFS for permanence -->
 
-## Customization
 
-### Contract Customization
 
-Edit `contracts/NFTCollection.sol` to modify:
-- Collection name and symbol
-- Mint price and max supply
-- Minting rules and restrictions
 
-### Frontend Customization
 
-Edit React components in `frontend/src/components/` to customize:
-- UI design and styling
-- Form fields and validation
-- Metadata structure
 
-## Troubleshooting
-
-### MetaMask Connection Issues
-
-The platform includes built-in troubleshooting for common MetaMask issues:
-
-1. **Circuit Breaker Errors**
-   - Automatic retry with exponential backoff
-   - Reset connection functionality
-   - Clear instructions for MetaMask reset
-
-2. **Network Issues**
-   - Automatic Sepolia network switching
-   - Manual network addition if needed
-   - Network validation and status checking
-
-3. **Connection Timeouts**
-   - Request timeout protection
-   - Retry mechanisms for failed connections
-   - User-friendly error messages
-
-### Common Solutions
-
-1. **MetaMask Connection Failed**
-   - Reset MetaMask account: Settings → Advanced → Reset Account
-   - Switch to Sepolia network manually
-   - Disable other wallet extensions
-   - Clear browser cache and refresh
-
-2. **Transaction Failed**
-   - Ensure sufficient Sepolia ETH (need ~0.015 ETH for minting)
-   - Check gas settings in MetaMask
-   - Verify contract is on correct network
-
-3. **IPFS Upload Failed**
-   - Verify Pinata API credentials in `frontend/.env`
-   - Check image file size (max 10MB recommended)
-   - Ensure stable internet connection
-
-4. **Contract Not Found**
-   - Verify `frontend/src/contracts/deployment.json` exists
-   - Check network configuration matches deployment
-   - Ensure MetaMask is on Sepolia testnet
-
-### Getting Help
-
-- Use the built-in troubleshooting guide in the app
-- Check browser console for detailed error messages
-- Verify network status at [Sepolia Status](https://sepolia.etherscan.io/)
-- Get testnet ETH from [faucets](https://sepoliafaucet.com/)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Available Scripts
-
-```bash
-# Compile smart contracts
-npm run compile
-
-# Deploy to Sepolia testnet
-npm run deploy:sepolia
-
-# Run contract tests
-npm run test
-
-# Start frontend development server
-npm run frontend
-
-# Verify deployed contract
-npx hardhat verify --network sepolia CONTRACT_ADDRESS "AbayNFT" "ABY" "DEPLOYER_ADDRESS"
+<!-- # Verify deployed contract
+npx hardhat verify --network sepolia CONTRACT_ADDRESS "AbayNFT" "ABY" "DEPLOYER_ADDRESS" 
 ```
+
 
 ## Project Structure
 
@@ -386,7 +283,7 @@ NFT-Minting-Platform/
 ├── .env                           # Environment variables
 ├── hardhat.config.js              # Hardhat configuration
 └── README.md
-```
+``` -->
 
 
 
