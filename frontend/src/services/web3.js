@@ -1,29 +1,26 @@
 import { ethers } from 'ethers';
 import NFTCollectionABI from '../contracts/NFTCollection.json';
+
 import deploymentInfo from '../contracts/deployment.json';
 
 let provider;
 let signer;
 let contract;
 
-// Helper function to wait and retry
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const connectWallet = async (retryCount = 0) => {
   try {
     if (typeof window.ethereum !== 'undefined') {
-      // Clear any existing provider state
       provider = null;
       signer = null;
       contract = null;
       
-      // Add delay for circuit breaker recovery
       if (retryCount > 0) {
         console.log(`Retrying connection (attempt ${retryCount + 1})...`);
         await delay(2000 * retryCount); // Exponential backoff
       }
       
-      // Request account access
       const accounts = await window.ethereum.request({ 
         method: 'eth_requestAccounts' 
       });
@@ -31,11 +28,10 @@ export const connectWallet = async (retryCount = 0) => {
       if (!accounts || accounts.length === 0) {
         throw new Error('No accounts found. Please unlock MetaMask.');
       }
-      
-      // Create provider with retry logic
+
       provider = new ethers.BrowserProvider(window.ethereum);
       
-      // Get network with timeout
+     
       const networkPromise = provider.getNetwork();
       const timeoutPromise = new Promise((_, reject) => 
         setTimeout(() => reject(new Error('Network request timeout')), 10000)
@@ -55,14 +51,14 @@ export const connectWallet = async (retryCount = 0) => {
             params: [{ chainId: `0x${parseInt(expectedChainId).toString(16)}` }],
           });
           
-          // Wait for network switch to complete
+          
           await delay(1000);
           
         } catch (switchError) {
           console.log('Switch error:', switchError.code);
           
           if (switchError.code === 4902) {
-            // Network not added, add Sepolia
+            
             console.log('Adding Sepolia network...');
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
@@ -87,11 +83,10 @@ export const connectWallet = async (retryCount = 0) => {
           }
         }
         
-        // Refresh provider after network operations
         provider = new ethers.BrowserProvider(window.ethereum);
       }
       
-      // Get signer with timeout
+    
       const signerPromise = provider.getSigner();
       const signerTimeoutPromise = new Promise((_, reject) => 
         setTimeout(() => reject(new Error('Signer request timeout')), 10000)
@@ -102,14 +97,14 @@ export const connectWallet = async (retryCount = 0) => {
       const address = await signer.getAddress();
       const balance = await provider.getBalance(address);
       
-      // Initialize contract
+      
       contract = new ethers.Contract(
         deploymentInfo.contractAddress,
         NFTCollectionABI.abi,
         signer
       );
       
-      // Test contract connection
+     
       try {
         await contract.name();
       } catch (contractError) {
@@ -133,7 +128,7 @@ export const connectWallet = async (retryCount = 0) => {
   } catch (error) {
     console.error('Connection error:', error);
     
-    // Handle specific MetaMask errors
+    // this Handle specific MetaMask errors
     if (error.message.includes('circuit breaker') || error.code === -32603) {
       if (retryCount < 3) {
         console.log('Circuit breaker detected, retrying...');
@@ -206,7 +201,7 @@ export const mintNFT = async (tokenURI, mintPrice) => {
     
     const receipt = await tx.wait();
     
-    // Find the NFTMinted event
+    // this find the NFTMinted event
     const mintEvent = receipt.logs.find(log => {
       try {
         const parsed = contract.interface.parseLog(log);
@@ -254,7 +249,7 @@ export const getUserMintedCount = async (address) => {
   }
 };
 
-// Helper function to check network status
+
 export const checkNetworkStatus = async () => {
   try {
     if (!window.ethereum) {
@@ -280,7 +275,7 @@ export const checkNetworkStatus = async () => {
   }
 };
 
-// Helper function to reset connection
+
 export const resetConnection = () => {
   provider = null;
   signer = null;
