@@ -11,15 +11,15 @@ A complete NFT minting platform built with React, Ethereum smart contracts, and 
 
 ## Features
 
-- 🎨 **ERC-721 Smart Contract** - Built with OpenZeppelin v5 for security and standards compliance
-- 🌐 **IPFS Storage** - Metadata and images stored on IPFS via Pinata
-- ⚛️ **React Frontend** - Modern, responsive UI for minting NFTs
-- 🔗 **Enhanced MetaMask Integration** - Robust wallet connection with error handling
-- 📊 **Real-time Stats** - Live contract information and minting progress
-- 🎯 **Attribute Support** - Add custom traits and properties to NFTs
-- 💰 **Configurable Pricing** - Owner-controlled mint price and supply limits
-- 🔧 **Advanced Error Handling** - Circuit breaker recovery and network validation
-- 🛠️ **Troubleshooting Guide** - Built-in help for connection issues
+- **ERC-721 Smart Contract** - Built with OpenZeppelin v5 for security and standards compliance
+- **IPFS Storage** - Metadata and images stored on IPFS via Pinata
+- **React Frontend** - Modern, responsive UI for minting NFTs
+- **Enhanced MetaMask Integration** - Robust wallet connection with error handling
+- **Real-time Stats** - Live contract information and minting progress
+- **Attribute Support** - Add custom traits and properties to NFTs
+- **Configurable Pricing** - Owner-controlled mint price and supply limits
+- **Advanced Error Handling** - Circuit breaker recovery and network validation
+- **Troubleshooting Guide** - Built-in help for connection issues
 
 ## Prerequisites
 
@@ -287,5 +287,4 @@ NFT-Minting-Platform/
 
 
 
-**AbayNFT Collection** - Built with ❤️ using React, Ethereum, and IPFS  
 🚀 **Live on Sepolia:** [0x71C7b5ba984A5f1011c1196a56a8130A8DB40e5E](https://sepolia.etherscan.io/address/0x71C7b5ba984A5f1011c1196a56a8130A8DB40e5E)
