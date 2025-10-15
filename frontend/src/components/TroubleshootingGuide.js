@@ -69,12 +69,7 @@ const TroubleshootingGuide = ({ onRetry }) => {
                     <h4>Common Solutions:</h4>
 
                     {troubleshootingSteps.map((step, index) => (
-                        <div key={index} style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '1rem',
-                            margin: '1rem 0',
-                            borderRadius: '8px'
-                        }}>
+                        <div key={index} className="troubleshooting-step">
                             <h5 style={{ color: '#ff6b6b', margin: '0 0 0.5rem 0' }}>
                                 {index + 1}. {step.title}
                             </h5>
@@ -91,20 +86,14 @@ const TroubleshootingGuide = ({ onRetry }) => {
                         </div>
                     ))}
 
-                    <div style={{
-                        background: 'rgba(255,107,107,0.1)',
-                        border: '1px solid #ff6b6b',
-                        padding: '1rem',
-                        borderRadius: '8px',
-                        marginTop: '2rem'
-                    }}>
+                    <div className="troubleshooting-help">
                         <h5 style={{ color: '#ff6b6b', margin: '0 0 0.5rem 0' }}>
                             Still Having Issues?
                         </h5>
                         <p style={{ margin: '0' }}>
                             Make sure you have Sepolia testnet ETH in your wallet.
                             Get free testnet ETH from: <br />
-                            • <a href="https://sepoliafaucet.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>
+                            • <a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>
                                 Sepolia Faucet
                             </a><br />
                             • <a href="https://faucets.chain.link/" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>
