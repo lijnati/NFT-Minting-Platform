@@ -133,9 +133,9 @@ function App() {
         ) : null}
       </main>
 
-      <footer className="App-footer">
+      {/* <footer className="App-footer">
         <p>Built with React, Ethereum, and IPFS</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

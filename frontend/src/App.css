@@ -3,6 +3,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-header {
@@ -13,13 +14,16 @@
 .App-header h1 {
   margin: 0;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-header p {
   margin: 0.5rem 0 0 0;
   font-size: 1.2rem;
   opacity: 0.9;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-main {
@@ -50,6 +54,8 @@
 .wallet-info h3 {
   margin: 0 0 1rem 0;
   color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .wallet-info p {
@@ -73,7 +79,8 @@
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0.5rem;
@@ -102,7 +109,8 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 .form-group input,
@@ -114,6 +122,8 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .form-group input::placeholder,
@@ -194,14 +204,55 @@
 
 .stat-value {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
 .stat-label {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-top: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Additional Poppins font styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 600; }
+h4 { font-weight: 500; }
+h5 { font-weight: 500; }
+h6 { font-weight: 400; }
+
+p, span, div {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.card h2, .card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.error-message, .success-message {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.file-upload p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Keep monospace for addresses and technical data */
+.wallet-info p {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -211,6 +262,7 @@
   
   .App-header h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
   
   .stats-grid {
