@@ -29,7 +29,7 @@ const WalletConnection = ({ onConnect, loading, showTroubleshooting = false }) =
           <p><strong>Network:</strong> Sepolia Testnet (Chain ID: 11155111)</p>
           <p>Make sure you have MetaMask installed and Sepolia testnet ETH.</p>
           <p>Don't have MetaMask? <a href="https://metamask.io" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>Download here</a></p>
-          <p>Need testnet ETH? <a href="https://sepoliafaucet.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>Get from faucet</a></p>
+          <p>Need testnet ETH? <a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank" rel="noopener noreferrer" style={{ color: '#ff6b6b' }}>Get from here</a></p>
         </div>
       </div>
       
